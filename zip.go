@@ -251,6 +251,10 @@ func (z Zip) Extract(ctx context.Context, sourceArchive io.Reader, handleFile Fi
 	return nil
 }
 
+func (z Zip) ExtractMulti(ctx context.Context, name string, handleFile FileHandler) error {
+	panic("unimplemented")
+}
+
 // decodeText decodes the name and comment fields from hdr into UTF-8.
 // It is a no-op if the text is already UTF-8 encoded or if z.TextEncoding
 // is not specified.

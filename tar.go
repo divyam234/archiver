@@ -244,6 +244,10 @@ func (t Tar) Extract(ctx context.Context, sourceArchive io.Reader, handleFile Fi
 	return nil
 }
 
+func (t Tar) ExtractMulti(ctx context.Context, name string, handleFile FileHandler) error {
+	panic("unimplemented")
+}
+
 // Interface guards
 var (
 	_ Archiver      = (*Tar)(nil)

@@ -122,6 +122,10 @@ func (z SevenZip) Extract(ctx context.Context, sourceArchive io.Reader, handleFi
 	return nil
 }
 
+func (z SevenZip) ExtractMulti(ctx context.Context, name string, handleFile FileHandler) error {
+	panic("unimplemented")
+}
+
 // https://py7zr.readthedocs.io/en/latest/archive_format.html#signature
 var sevenZipHeader = []byte("7z\xBC\xAF\x27\x1C")
 

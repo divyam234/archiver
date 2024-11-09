@@ -99,6 +99,7 @@ type Extractor interface {
 	//
 	// Context cancellation must be honored.
 	Extract(ctx context.Context, archive io.Reader, handleFile FileHandler) error
+	ExtractMulti(ctx context.Context, name string, handleFile FileHandler) error
 }
 
 // Inserter can insert files into an existing archive.
